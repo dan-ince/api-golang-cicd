@@ -4,6 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	"fmt"
 )
 
 type album struct {
@@ -30,6 +32,8 @@ func main() {
 	router.GET("/albums/:id", getAlbumByID)
 
 	router.Run("localhost:8080")
+
+	fmt.Println("Hello World")
 
 }
 
