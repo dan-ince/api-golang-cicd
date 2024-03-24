@@ -19,6 +19,6 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-          docker build -t your-image-name .
-          docker push your-image-name
+          docker build -t api-golang-cicd .
+          docker push pradadan/api-golang-cicd:latest
 
